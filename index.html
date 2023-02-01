@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+        }
+        .rojo{
+            background-color: red;
+        }
+        .verde{
+            background-color: green;
+        }
+        .azul{
+            background-color: blue;
+        }
+        .amarillo{
+            background-color: yellow;
+        }
+    </style>
+
+
+</head>
+<body>
+    
+
+
+    <label for="colores">Elige color:</label>
+
+    <select name="colores" id="color" onchange="cambiaColor(this.value)">
+        <option value="rojo">Rojo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+        <option value="amarillo">Amarillo</option>
+
+    </select>
+    <div id="box">
+
+    </div>
+    <script>
+        function cambiaColor(color){
+            alert(color);
+           var box = document.getElementById("box");
+           box.setAttribute('class', color);
+        }
+    </script>
+</body>
+</html>
